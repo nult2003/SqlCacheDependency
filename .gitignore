@@ -3,3 +3,21 @@
 ################################################################################
 
 /sqlCacheDependencyDemo/bin/System.Web.Webpages.xml
+/sqlCacheDependencyDemo/bin/System.Web.Webpages.Razor.xml
+/sqlCacheDependencyDemo/bin/System.Web.Webpages.Razor.dll
+/sqlCacheDependencyDemo/bin/System.Web.Webpages.dll
+/sqlCacheDependencyDemo/bin/System.Web.Webpages.Deployment.xml
+/sqlCacheDependencyDemo/bin/System.Web.Webpages.Deployment.dll
+/sqlCacheDependencyDemo/bin/System.Web.Razor.xml
+/sqlCacheDependencyDemo/bin/System.Web.Razor.dll
+/sqlCacheDependencyDemo/bin/System.Web.Mvc.xml
+/sqlCacheDependencyDemo/bin/System.Web.Mvc.dll
+/sqlCacheDependencyDemo/bin/System.Web.Helpers.xml
+/sqlCacheDependencyDemo/bin/System.Web.Helpers.dll
+/sqlCacheDependencyDemo/bin/sqlCacheDependencyDemo.pdb
+/sqlCacheDependencyDemo/bin/sqlCacheDependencyDemo.dll.config
+/sqlCacheDependencyDemo/bin/sqlCacheDependencyDemo.dll
+/sqlCacheDependencyDemo/bin/Microsoft.Web.Infrastructure.dll
+/sqlCacheDependencyDemo/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+/sqlCacheDependencyDemo/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+/.vs/sqlCacheDependency/v15

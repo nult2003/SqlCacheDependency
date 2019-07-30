@@ -4,5 +4,20 @@
 }
 
 <h2>Sql cache demo</h2>
-<button type="button" onclick="location.href='@Url.Action("CheckSqlCache", "Home")'" />
+<div><button type="button" onclick="location.href='@Url.Action("CheckSqlCache", "Home")'" />Check sql cache</div>
+<div><button type="button" onclick="location.href='@Url.Action("Message", "Home")'" />Push notifier to client</div>
+<ul id="messages"></ul>
+<script>
+    function contentLoaded() {
+        var source = new EventSource('Home/Message');
+        var ul = document.getElementById("messages");
+        source.onmessage = function (e) {
+            var li = document.createElement("li");
+            var returnedItem = JSON.parse(e.data);
+            li.textContent = returnedItem.message + ' ' + returnedItem;
+            ul.appendChild(li);
+        }
+    }
 
+    window.addEventListener("DOMContentLoaded", contentLoaded, false);
+</script>

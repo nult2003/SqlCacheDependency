@@ -4,9 +4,11 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Caching;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace sqlCacheDependencyDemo.Controllers
 {
@@ -18,6 +20,17 @@ namespace sqlCacheDependencyDemo.Controllers
         {
             LoadMessages();
             return View();
+        }
+
+        public ActionResult Message()
+        {
+            var result = string.Empty;
+            var sb = new StringBuilder();
+            JavaScriptSerializer ser = new JavaScriptSerializer();
+            var serializedObject = ser.Serialize(new { item = "minh nhat", message = "hello" });
+            sb.AppendFormat("data: {0}\n\n", serializedObject);
+
+            return Content(sb.ToString(), "text/event-stream");
         }
 
         public ActionResult CheckSqlCache()
@@ -58,5 +71,7 @@ namespace sqlCacheDependencyDemo.Controllers
             dependency.OnChange -= new OnChangeEventHandler(dependency_OnChange);
             
         }
+
+
     }
 }
